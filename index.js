@@ -4,6 +4,7 @@ const X = drawSymbol(1, 'X');
 function toRoman(a) {
     const modulo = a % 5;
     const moduloTen = a % 10;
+    const moduloTenFive = a % 15;
     if(modulo === 0 ){
         if(a > 15){
             return X+X;
@@ -21,8 +22,11 @@ function toRoman(a) {
         return drawModuloFourSymbols(a);
     }
 
-    if(a > moduloTen) {
-        return X + drawSymbol(modulo, 'I');
+    if(a > moduloTenFive) {
+        return X + V + drawSymbol(moduloTenFive, 'I');
+    }
+    else if(a > moduloTen) {
+        return X + drawSymbol(moduloTen, 'I');
     }
     else if(a > modulo) {
         return V + drawSymbol(modulo, 'I');
