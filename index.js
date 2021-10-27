@@ -1,16 +1,28 @@
 function toRoman(a) {
 
-    if(a % 5 === 0 ){
-        return drawSymbol(1, 'V');
+    const I = drawSymbol(1, 'I');
+    const V = drawSymbol(1, 'V');
+    const X = drawSymbol(1, 'X');
+    const modulo = a % 5;
+    if(a % 10 === 0 && a % 2 === 0){
+        return X;
     }
-    if(a === 4){
-        return drawSymbol(1, 'I') + drawSymbol(1, 'V')
+    if(a % 5 === 0 ){
+        return V;
+    }
+    if(modulo === 4){
+        if (a > 5){
+            return I + X;
+        } else {
+            return I + V;
+        }
+    }
+    if(a > 5 ){
+        return V + drawSymbol(modulo, 'I');
     }
     if(a <= 3 ){
         return drawSymbol(a, 'I');
-    }
-
-    
+    } 
 }
 
 function drawSymbol(num, sym){
