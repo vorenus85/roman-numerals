@@ -4,7 +4,7 @@
   "description": "Function for convert normal numbers to Roman Numerals, using with TDD",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "jest --watchAll"
   },
   "repository": {
     "type": "git",

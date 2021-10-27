@@ -1,5 +1,5 @@
-function sum(a, b) {
-    return a + b;
+function toRoman(a) {
+    return 'I';
 }
 
-module.exports = sum;
+module.exports = toRoman;

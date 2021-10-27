@@ -1,11 +1,11 @@
-let sum = require('./index');
-const expectations = [
-    [1, 1, 2],
-    [2, 1, 3]
+let toRoman = require('./index');
+const cases = [
+    [1, 'I'],
+    //[2, 'II'],
 ];
 
-describe('test sum function', () => {
-    test.each(expectations)('sum(%i, %i) should return %i', (a, b, result) => {
-        expect(sum(a, b)).toEqual(result);
+describe('test toRoman function', () => {
+    test.each(cases)('toRoman(%p) should return %p', (given, expected) => {
+        expect(toRoman(given)).toEqual(expected);
     });
 });
