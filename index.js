@@ -1,10 +1,14 @@
 function toRoman(a) {
+    return symbolI(a);
+}
 
-    if(a % 2 === 0){
-        return 'II'
-    } else {
-        return 'I';
+function symbolI(num){
+    const symbol = 'I';
+    let returnSymbol = '';
+    for (let i = 0; i < num; i++) {
+        returnSymbol += symbol;
     }
+    return returnSymbol;
 }
 
 module.exports = toRoman;
