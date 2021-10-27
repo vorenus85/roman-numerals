@@ -5,11 +5,14 @@ function toRoman(a) {
     const modulo = a % 5;
     const moduloTen = a % 10;
     if(modulo === 0 ){
-        if(moduloTen === 0){
-            return X;
+        if(a > 15){
+            return X+X;
         }
         if(a > 10){
             return X+V;
+        }
+        if(moduloTen === 0){
+            return X;
         }
         return V;
     }
@@ -38,19 +41,13 @@ function drawSymbol(num, sym){
 }
 
 function drawModuloFourSymbols(a){
-    switch (a) {
-        case 4:
-            return I+V;
-            break;
-        case 9:
-            return I+X;
-            break;
-        case 14:
-            return X+I+V;
-            break;
-        default:
-            break;
+    const obj = {
+        4: I+V,
+        9: I+X,
+        14: X+I+V,
+        19: X+I+X
     }
+    return obj[a];
 }
 
 module.exports = toRoman;
