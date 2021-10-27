@@ -1,5 +1,12 @@
 function toRoman(a) {
-    return symbolI(a);
+
+    if(a <= 3 ){
+        return symbolI(a);
+    } else {
+        return 'IV';
+    }
+
+    
 }
 
 function symbolI(num){
