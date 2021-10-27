@@ -1,0 +1,28 @@
+{
+  "name": "roman-numerals",
+  "version": "1.0.0",
+  "description": "Function for convert normal numbers to Roman Numerals, using with TDD",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vorenus85/roman-numerals.git"
+  },
+  "keywords": [
+    "TDD",
+    "roman",
+    "numbes",
+    "convert"
+  ],
+  "author": "Janos Perge",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vorenus85/roman-numerals/issues"
+  },
+  "homepage": "https://github.com/vorenus85/roman-numerals#readme",
+  "dependencies": {
+    "jest": "^27.3.1"
+  }
+}
