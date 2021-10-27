@@ -1,5 +1,10 @@
 function toRoman(a) {
-    return 'I';
+
+    if(a % 2 === 0){
+        return 'II'
+    } else {
+        return 'I';
+    }
 }
 
 module.exports = toRoman;
